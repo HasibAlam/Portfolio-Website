@@ -1,0 +1,133 @@
+/* General Reset and Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    padding: 20px;
+    background-color: #2e3842;
+}
+
+header nav ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
+
+header nav ul li {
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+header hr {
+    margin-top: 10px;
+    border: 1px solid #ccc;
+}
+
+/* Project Box Styling */
+.projects-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.project-box {
+    width: 80%;
+    margin-bottom: 40px;
+    background-color: #f4f4f4;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.project-box h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.project-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.project-content.reverse {
+    flex-direction: row-reverse;
+}
+
+/* Project Text Styling */
+.project-text {
+    width: 50%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.project-text p {
+    margin-bottom: 40px;
+}
+
+.project-text .btn-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.project-text .btn {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    margin-right: 10px;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.project-text .btn:hover {
+    background-color: #555;
+}
+
+/* Project Image Styling */
+.project-image {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-image img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .project-content {
+        flex-direction: column;
+    }
+
+    .project-content.reverse {
+        flex-direction: column;
+    }
+
+    .project-text, .project-image {
+        width: 100%;
+    }
+
+    .project-image img {
+        width: 80%;
+    }
+}

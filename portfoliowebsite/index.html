@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+    <!-- Font Awesome CDN for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <style>
+      /* Custom styles for the changes */
+      .details-container h4 {
+        color: red; /* Swinburne University in red */
+      }
+      .details-container p.graduation {
+        font-family: 'Arial', sans-serif; /* Custom font for graduation */
+        font-weight: bold;
+        font-size: 1.2em;
+      }
+      .about-education-container {
+        display: flex; /* Use flexbox to align items horizontally */
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 30px;
+        margin: 0 auto;
+        max-width: 1200px;
+        padding: 20px;
+      }
+      .about-text, .education-box {
+        flex: 1; /* Each column takes up equal space */
+      }
+      .about-text {
+        text-align: left; /* Left-align the About Me text */
+      }
+      .education-box {
+        background-color: #f0f0f0; /* Light background color for the education box */
+        padding: 20px;
+        border-radius: 10px;
+      }
+      @media (max-width: 768px) {
+        .about-education-container {
+          flex-direction: column; /* Stack columns on smaller screens */
+        }
+      }
+/* Light mode toggle button (moon icon) */
+.toggle-button {
+  position: fixed; /* Ensures it stays in the top-right of the screen */
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  font-size: 2rem;
+  color: black;
+  z-index: 100; /* Ensure it stays above other content */
+}
+
+body.dark-mode .toggle-button {
+  color: yellow; /* Icon color when in dark mode */
+}
+
+/* Responsive positioning for the toggle button */
+@media (max-width: 768px) {
+  .toggle-button {
+    top: 15px;
+    right: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .toggle-button {
+    top: 10px;
+    right: 10px;
+    font-size: 1.8rem; /* Adjust the size slightly for smaller screens */
+  }
+}
+
+
+    </style>
+  </head>
+  <body>
+    <nav id="desktop-nav">
+      <div class="logo">Hasib Alam</div>
+      <div>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+   <!-- Toggle Button for Dark/Light Mode -->
+<button id="mode-toggle" class="toggle-button">
+  <i id="mode-icon" class="fas fa-moon"></i>
+</button>
+
+
+    <!-- Profile Section -->
+    <section id="profile">
+      <div class="section__pic-container">
+        <img src="./assets/profile-pic.png" alt="Hasib Alam profile picture" />
+      </div>
+
+      <div class="section__text">
+        <p  class="section__text__p1">Hello, I'm</p>
+        <h1 class="title">Hasib Alam</h1>
+        <p class="section__text__p2">Data Analyst and Full-Stack Developer</p>
+        <p class="section__text__p1">I specialize in programming, data science, statistics, and development</p>
+        <br>
+        <div class="btn-container">
+          <button
+            class="btn btn-color-2"
+            onclick="window.open('./assets/resume.pdf')"
+          >
+            Download CV
+          </button>
+          <button class="btn btn-color-1" onclick="location.href='./#contact'">
+            Contact Info
+          </button>
+        </div>
+        <div id="socials-container">
+          <a href="linkedin.com/in/hasib-alam-b58987214" target="_blank">
+            <i class="fab fa-linkedin" style="color: black; font-size: 32px;"></i>
+          </a>
+          <a href="https://github.com/HasibAlam" target="_blank">
+            <i class="fab fa-github" style="color: black; font-size: 32px;"></i>
+          </a>
+          <a href="https://www.facebook.com/hasib.alam.104/" target="_blank">
+            <i class="fab fa-facebook" style="color: black; font-size: 32px;"></i>
+          </a>
+          <a href="mailto:hasibalamsadat2001@gmail.com">
+            <i class="fas fa-envelope" style="color: black; font-size: 32px;"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+<hr>
+
+
+    <<!-- Section with About Me on the left and Education on the right -->
+<section id="about">
+  <p class="section__text__p1">Get To Know More</p>
+  <h1 class="title">About Me</h1>
+  <div class="about-education-container">
+    <!-- Left Column (About Me) -->
+    <div class="about-text">
+      <p>
+        I am <strong>Hasib Alam</strong>, a passionate and driven Data Analyst and Full-Stack Developer, 
+        currently pursuing a Bachelor's in Computer Science with a major in Data Science at Swinburne University. 
+        I have over two years of experience working in full stack development and data analysis, specializing in cloud 
+        technologies, DevOps, and scalable software architectures.
+      </p>
+      <br />
+      <p>
+        I possess strong technical expertise in Python, MySQL, C#, PHP, React, JavaScript, AWS, and Azure, allowing me to 
+        efficiently develop robust full-stack applications, deploying them and performing advanced data analytics. My experience spans across 
+        DevOps pipelines, full-stack web development, and working with cloud platforms to deploy high-performing solutions.
+      </p>
+      <br />
+      <p>
+        Throughout my career, I have developed and contributed to several projects, including implementing 
+        CI/CD pipelines and building full-stack applications. I’m adept at handling data using tools like Python 
+        and KNIME, along with a solid understanding of Docker, Git, and CI/CD practices for automating software delivery.
+      </p>
+      <p>
+        My goal is to continuously expand my skills and knowledge in the tech space, tackling complex problems 
+        with innovative solutions, while focusing on delivering quality results for every project I undertake.
+      </p>
+    </div>
+
+    <!-- Right Column (Education) -->
+    <div class="education-container">
+      <div class="education-box">
+        <img src="./assets/education.png" alt="Education icon" class="icon" />
+        <h3>Education</h3>
+        <h4>Swinburne University of Technology</h4> <!-- Red colored text -->
+        <p>Bachelors of Computer Science<br />Major in Data Science and minor in Applied Mathematics</p>
+        <p class="graduation">Graduate May 2025</p> <!-- Updated font style -->
+      </div>
+
+      <!-- Two images beneath the education box, but outside of it -->
+      <div class="education-images-container">
+        <div class="education-image">
+          <img src="./assets/swin1.jpeg" alt="Picture 1" />
+        </div>
+        <div class="education-image">
+          <img src="./assets/swin2.jpeg" alt="Picture 2" />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Skills Section -->
+<section id="skills" class="skills-section">
+  <h1>Skills</h1>
+
+  <!-- Programming Skills Section -->
+  <div class="skills-category">
+    <h2 class="skill-title">Programming Skills</h2>
+    <div class="skills-container programming-skills">
+      <div class="skill-box">
+        <i class="fab fa-python fa-3x" style="color: #3776AB;"></i>
+        <p>Python</p>
+        <p class="skill-description">Proficient in Python for building scripts, automating tasks, and data manipulation.</p>
+      </div>
+      <div class="skill-box">
+        <img src="./assets/cicon.png" alt="c#" />
+        <p>C#</p>
+        <p class="skill-description">Experienced with C# in developing robust web and desktop applications.</p>
+      </div>
+      <div class="skill-box">
+        <i class="fab fa-php fa-3x" style="color: #8892BF;"></i>
+        <p>PHP</p>
+        <p class="skill-description">Developed dynamic web applications using PHP, focusing on backend development.</p>
+      </div>
+      <div class="skill-box">
+        <i class="fas fa-database fa-3x" style="color: #4DB33D;"></i>
+        <p>MySQL</p>
+        <p class="skill-description">Skilled in database management and optimization using MySQL for scalable applications.</p>
+      </div>
+      <div class="skill-box">
+        <i class="fab fa-react fa-3x" style="color: #61DAFB;"></i>
+        <p>React</p>
+        <p class="skill-description">Proficient in building interactive user interfaces and single-page applications using React.</p>
+      </div>
+      <div class="skill-box">
+        <i class="fab fa-js fa-3x" style="color: #F0DB4F;"></i>
+        <p>JavaScript</p>
+        <p class="skill-description">Experienced in JavaScript for adding dynamic functionality to web applications.</p>
+      </div>
+      <div class="skill-box">
+        <i class="fab fa-html5 fa-3x" style="color: #E34C26;"></i>
+        <p>HTML</p>
+        <p class="skill-description">Expert in building web structures using semantic HTML.</p>
+      </div>
+      <div class="skill-box">
+        <i class="fab fa-css3-alt fa-3x" style="color: #1572B6;"></i>
+        <p>CSS</p>
+        <p class="skill-description">Skilled in styling and making responsive designs using CSS and pre-processors.</p>
+      </div>
+    </div>
+  </div>
+ <!-- Data Science Skills Section -->
+ <div class="skills-category">
+  <h2 class="skill-title">Data Science Skills</h2>
+  <div class="skills-container">
+    <div class="skill-box">
+      <img src="./assets/excel-icon.png" alt="Excel" />
+      <p>Excel</p>
+      <p class="skill-description">Proficient in using Excel for data analysis, reports, and data manipulation.</p>
+    </div>
+    <div class="skill-box">
+      <img src="./assets/knime-icon.png" alt="KNIME" />
+      <p>KNIME</p>
+      <p class="skill-description">Proficient in using KNIME for advanced data workflows, ETL tasks, and data mining.</p>
+    </div>
+    <div class="skill-box">
+      <img src="./assets/r-icon.png" alt="R" />
+      <p>R</p>
+      <p class="skill-description">Skilled in R programming for statistical analysis and data visualization.</p>
+    </div>
+    <div class="skill-box">
+      <img src="./assets/hadoop-icon.png" alt="Hadoop" />
+      <p>Hadoop</p>
+      <p class="skill-description">Hands-on experience with Hadoop ecosystem, including HDFS and MapReduce for big data processing.</p>
+    </div>
+  </div>
+</div>
+
+  <!-- DevOps and Cloud Skills Section -->
+  <div class="skills-category">
+    <h2 class="skill-title">DevOps and Cloud Skills</h2>
+    <div class="skills-container">
+      <div class="skill-box">
+        <i class="fab fa-aws fa-3x" style="color: #FF9900;"></i>
+        <p>AWS</p>
+        <p class="skill-description">Experienced with AWS services such as EC2, S3, and Lambda for deploying scalable cloud applications.</p>
+      </div>
+      <div class="skill-box">
+        <i class="fab fa-docker fa-3x" style="color: #2496ED;"></i>
+        <p>Docker</p>
+        <p class="skill-description">Adept in containerization and creating Dockerized environments for microservices.</p>
+      </div>
+      <div class="skill-box">
+ <img src="./assets/azure.png" alt="Azure" />
+         <p>Azure</p>
+        <p class="skill-description">Proficient in deploying, managing, and automating services using Microsoft Azure.</p>
+      </div>
+      <div class="skill-box">
+        <img src="./assets/ci.png" alt="ci" />        <p>CI/CD Pipelines</p>
+        <p class="skill-description">Implemented CI/CD pipelines using tools like Jenkins, GitHub Actions, and Azure DevOps.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <section id="projects">
+      <p class="section__text__p1">Browse My Recent</p>
+      <h1 class="title">Projects</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+    
+          <!-- First Project: Restaurant Management System -->
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/project1.png"
+                alt="Restaurant Management System"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Restaurant Management System</h2>
+            <p>A fullstack frontend and backend restaurant management system using Object Oriented Design principles.</p>
+            <br>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='restaurant.html'"
+              >
+                View Project
+              </button>
+            </div>
+          </div>
+    
+          <!-- Second Project: Smart Contract Auditing Platform -->
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/project2.png"
+                alt="Smart Contract Auditing Platform"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Smart Contract Auditing Platform</h2>
+            <p>Full-stack platform to find vulnerabilities in smart contracts using Slither, categorize and store them in a database.</p>
+            <br>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='slither.html'"
+              >
+                View Project
+              </button>
+            </div>
+          </div>
+    
+          <!-- Third Project: Continuous Deployment CI/CD Pipeline -->
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/project3.png"
+                alt="Continuous Deployment CI/CD pipeline"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Continuous Deployment CI/CD pipeline</h2>
+            <p>A DevOps pipeline from scratch using GitHub, Azure, and Docker. Automated CI/CD pipeline.</p>
+            <br>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='pipeline.html'"
+              >
+                View Project
+              </button>
+            </div>
+          </div>
+    
+        </div>
+            <!-- Go to All Projects Button -->
+            <div class="project-btn-container">
+              <button
+                id="unique-project-btn"
+                onclick="location.href='allprojects.html'"
+              >
+                Go to All Projects
+              </button>
+            </div>
+    
+            <style>
+              /* Unique styles for the 'Go to All Projects' button */
+              #unique-project-btn {
+                font-family: 'Arial', sans-serif;
+                font-size: 1.5rem; /* Larger font size */
+                padding: 1.5rem 3rem; /* Larger padding for a bigger box */
+                background-color: #fff;
+                border: 2px solid #000;
+                color: #000;
+                cursor: pointer;
+                transition: all 0.3s ease-in-out;
+                border-radius: 5px; /* Add some border-radius for a smoother look */
+              }
+    
+              #unique-project-btn:hover {
+                background-color: red;
+                color: white;
+                border-color: red; /* Change border color to red on hover */
+              }
+    
+              /* Center the button container */
+              .project-btn-container {
+                text-align: center;
+                margin-top: 30px; /* Adjust margin as needed */
+              }
+            </style>
+    
+     
+    </section>
+    <section id="experience">
+      <p class="section__text__p1">Explore My</p>
+      <h1 class="title">Experience</h1>
+  
+      <div class="experience-details-container">
+          <!-- Company 1: Gaura Travels -->
+          <div class="experience-box">
+              <img src="assets/gt.png" alt="Gaura Travels" class="company-image">
+              <h2 class="experience-sub-title">Data Analyst and Web Developer Intern, Gaura Travels</h2>
+              <p><strong>February 2024 – June 2024</strong></p>
+              <ul>
+                  <li><strong>Web Development & Software Engineering:</strong> Hands-on experience in HTML, CSS, JavaScript, contributing to the design and deployment of web-based solutions.</li>
+                  <li><strong>Data Analysis & Visualization:</strong> Proficient in Python, SQL, and Tableau for analyzing and visualizing data, facilitating informed decision-making.</li>
+                  <li><strong>Database Management & ETL Processes:</strong> Skilled in database management, optimizing schema, and establishing ETL processes for data integrity.</li>
+                  <li><strong>Cross-Functional Collaboration:</strong> Effective communicator, translating business requirements into technical solutions, fostering collaboration.</li>
+                  <li><strong>Technical Problem-Solving:</strong> Strong analytical skills, adept at troubleshooting technical issues, and implementing solutions for project success.</li>
+              </ul>
+          </div>
+  
+          <!-- Company 2: Global Travel Xperts -->
+          <div class="experience-box">
+              <img src="assets/gtx.png" alt="Global Travel Xperts" class="company-image">
+              <h2 class="experience-sub-title">Data Analyst Casual, Global Travel Xperts</h2>
+              <p><strong>March 2024 – May 2024</strong></p>
+              <ul>
+                  <li><strong>Data Analysis & Web Development:</strong> Worked with SQL queries and PHP for managing databases, while maintaining the company website.</li>
+                  <li><strong>Business Insights:</strong> Leveraged data analysis tools to track customer behavior and provide valuable insights for business growth.</li>
+                  <li><strong>Cross-Company Collaboration:</strong> Continued work as a Data Analyst and Web Developer, handling data for Global Travel Xperts, a sister company of Gaura Travels.</li>
+              </ul>
+          </div>
+  
+          <!-- Company 3: The Shaver Shop -->
+          <div class="experience-box">
+              <img src="assets/shaver.jpeg" alt="The Shaver Shop" class="company-image">
+              <h2 class="experience-sub-title">Sales Assistant, The Shaver Shop</h2>
+              <p><strong>August 2022 – Present</strong></p>
+              <ul>
+                  <li><strong>Customer Service & Relationship Management:</strong> Delivered excellent customer service, building strong connections and promoting loyalty.</li>
+                  <li><strong>Sales Proficiency & Product Knowledge:</strong> Increased customer satisfaction and sales revenue by leveraging deep product knowledge to drive effective sales communication.</li>
+                  <li><strong>Team Collaboration & Communication:</strong> Fostered a positive work environment, contributing to the achievement of team goals through strong interpersonal skills.</li>
+                  <li><strong>Technical Proficiency & Retail Operations:</strong> Managed point-of-sale systems and inventory control, ensuring smooth retail operations and compliance with health and safety standards.</li>
+              </ul>
+          </div>
+  
+          <!-- Company 4: Gulshan Plaza Restaurant -->
+          <div class="experience-box">
+              <img src="assets/gpr.jpeg" alt="Gulshan Plaza Restaurant" class="company-image">
+              <h2 class="experience-sub-title">Cashier and Co-Owner, Gulshan Plaza Restaurant</h2>
+              <p><strong>January 2021 – December 2022</strong></p>
+              <ul>
+                  <li><strong>Financial Management:</strong> Managed cash flow, kept accurate sales records, and handled financial transactions with efficiency.</li>
+                  <li><strong>Business Operations:</strong> Oversaw inventory control, implemented key business strategies, and managed day-to-day restaurant operations.</li>
+                  <li><strong>Customer Service Excellence:</strong> Delivered high-quality customer service, addressed inquiries, and ensured customer satisfaction.</li>
+                  <li><strong>Team Leadership & Collaboration:</strong> Led and motivated staff to foster a collaborative working environment that enhanced performance.</li>
+              </ul>
+          </div>
+      </div>
+  </section>
+  
+  <section id="achievements">
+    <h1 class="title">Achievements</h1>
+    <div class="achievements-container">
+        <div class="achievements-text">
+            <ul>
+                <li><i class="fas fa-star"></i> Awarded 75% Excellence scholarship from Swinburne which is effective even now.</li>
+                <li><i class="fas fa-star"></i> Winner of the Swinburne Industry Spirit - December 2023.</li>
+                <li><i class="fas fa-star"></i> Received a letter of Commendation from the Vice Chancellor for my grades.</li>
+                <li><i class="fas fa-star"></i> I have an average of distinction marks in my current course along with all Higher Distinctions in my mathematics units (5).</li>
+                <li><i class="fas fa-star"></i> Scored 8 A* in my O levels under CAIE and 4 A* in my A levels under CAIE.</li>
+            </ul>
+        </div>
+        <div class="achievements-images">
+            <img src="assets/letter.png" alt="Award Image 1" class="achievement-image">
+            <img src="assets/winner.jpeg" alt="Award Image 2" class="achievement-image">
+        </div>
+    </div>
+</section>
+
+
+    <section id="contact">
+      <p class="section__text__p1">Get in Touch</p>
+      <h1 class="title">Contact Me</h1>
+      <div class="contact-info-upper-container">
+        <div class="contact-info-container">
+          <img
+            src="./assets/email.png"
+            alt="Email icon"
+            class="icon contact-icon email-icon"
+          />
+          <p><a href="mailto:hasibalamsadat2001@gmail.com">hasibalamsadat2001@gmail.com</a></p>
+        </div>
+        <div class="contact-info-container">
+          <img
+            src="./assets/linkedin.png"
+            alt="LinkedIn icon"
+            class="icon contact-icon"
+          />
+          <p><a href="www.linkedin.com/in/hasib-alam-b58987214">LinkedIn</a></p>
+        </div>
+        <div class="contact-info-container">
+          <i class="fab fa-facebook" style="color: black; font-size: 32px;"></i>
+          <p><a href="https://www.facebook.com/hasib.alam.104/" target="_blank">Facebook</a></p>
+      </div>
+      
+    </section>
+
+    <footer>
+      <nav>
+        <div>
+          <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li> <!-- Link to Skills Section -->
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+    </footer>
+    <script>
+      // JavaScript to handle dark mode toggle
+      const toggleButton = document.getElementById('mode-toggle');
+      const modeIcon = document.getElementById('mode-icon');
+      const body = document.body;
+
+      toggleButton.addEventListener('click', () => {
+        // Toggle the dark mode class on the body
+        body.classList.toggle('dark-mode');
+
+        // Toggle between the moon and sun icons
+        if (body.classList.contains('dark-mode')) {
+          modeIcon.classList.remove('fa-moon');
+          modeIcon.classList.add('fa-sun');
+        } else {
+          modeIcon.classList.remove('fa-sun');
+          modeIcon.classList.add('fa-moon');
+        }
+      });
+    </script>
+    <script src="script.js"></script>
+  </body>
+</html>
