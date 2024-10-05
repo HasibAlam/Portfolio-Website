@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slither Project</title>
+    <link rel="stylesheet" href="slither.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav id="desktop-nav">
+            <ul class="nav-links">
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#skills">Skills</a></li>
+                <li><a href="index.html#projects">Projects</a></li>
+                <li><a href="index.html#experience">Experience</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <img src="assets/slither.png" alt="Slither Project" style="width: 50%; margin: 20px auto 20px auto; display: block;">
+
+    <section id="slither-project" style="display: flex; justify-content: center; align-items: center; height: 100vh;">
+        <div style="max-width: 600px; text-align: left; padding: 20px; background-color: rgba(0, 0, 0, 0.7); border-radius: 15px;">
+            <h2>Slither Project</h2>
+            <p>The Slither Project is a decentralized Ethereum smart contract auditing platform designed to provide a seamless and secure process for detecting vulnerabilities in Solidity contracts. This project allows users to upload Solidity contracts, which are then audited using Slither, and the results are displayed on a web-based dashboard. The project integrates front-end, back-end, and API communication for an efficient auditing process.</p>
+
+            <h3>Functionality</h3>
+            <ul>
+                <li>Users upload Solidity smart contracts for auditing.</li>
+                <li>The backend processes the contract and runs Slither for analysis.</li>
+                <li>The audit results are stored in a MySQL database.</li>
+                <li>The FastAPI API fetches audit results and delivers them to the frontend.</li>
+                <li>Users can view audit reports, download them, and see audit history.</li>
+                <li>The dashboard provides a real-time view of vulnerabilities detected.</li>
+            </ul>
+
+            <h3>Backend, Frontend, and API</h3>
+            <p>The backend is built using <strong>Python</strong> with FastAPI for the API services. It processes the contracts, triggers the Slither analysis, and stores results in <strong>MySQL</strong>. The frontend is developed with <strong>React</strong>, which provides a responsive and user-friendly interface for interacting with the auditing system and viewing results. FastAPI ensures fast, secure, and scalable communication between the front-end and back-end systems.</p>
+
+            <!-- Buttons for Website and GitHub -->
+            <div style="margin-top: 20px; text-align: center;">
+                <a href="https://github.com/HasibAlam/Smart-Audit" target="_blank" style="text-decoration: none;">
+                    <button style="padding: 10px 20px; background-color: black; color: white; border: none; border-radius: 5px; cursor: pointer; transition: color 0.3s;">
+                        GitHub Repo
+                    </button>
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Now Tools and Technology Section is outside the box -->
+    <section class="section-image" id="tools-technology">
+        <h2>Tools and Technology Used</h2>
+        <div class="tools-container">
+            <div class="tool">
+                <i class="fab fa-python"></i>
+                <p>Python</p>
+            </div>
+            <div class="tool">
+                <i class="fas fa-server"></i>
+                <p>FastAPI</p>
+            </div>
+            <div class="tool">
+                <i class="fab fa-react"></i>
+                <p>React</p>
+            </div>
+            <div class="tool">
+                <i class="fas fa-database"></i>
+                <p>MySQL</p>
+            </div>
+            <div class="tool">
+                <i class="fab fa-js-square"></i>
+                <p>JavaScript</p>
+            </div>
+        </div>
+        
+    </section>
+
+    <div style="margin-top: 40px; text-align: center;">
+        <h3>Watch the Slither Demo</h3>
+        <iframe src="https://liveswinburneeduau-my.sharepoint.com/personal/103810516_student_swin_edu_au/_layouts/15/embed.aspx?UniqueId=fc3c0651-594c-4086-b7c5-616983106147&embed=%7B%22ust%22%3Atrue%2C%22hv%22%3A%22CopyEmbedCode%22%7D&referrer=StreamWebApp&referrerScenario=EmbedDialog.Create" width="640" height="360" frameborder="0" scrolling="no" allowfullscreen title="smartproject.mp4"></iframe>
+        </div>
+        <br>
+        <br>
+        <div style="margin-top: 20px; text-align: center;">
+            <a href="https://github.com/HasibAlam/Smart-Audit" target="_blank" style="text-decoration: none;">
+                <button style="padding: 20px 40px; background-color: rgb(204, 33, 33); color: white; border: none; border-radius: 5px; cursor: pointer; transition: color 0.3s;">
+                    GitHub Repo
+                </button>
+            </a>
+        </div>
+        <br>
+        <br>
+</body>
+</html>

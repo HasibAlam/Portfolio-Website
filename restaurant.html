@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant</title>
+    <link rel="stylesheet" href="restaurant.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <header>
+        <nav id="desktop-nav">
+            <ul class="nav-links">
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#skills">Skills</a></li> <!-- Link to index.html -->
+                <li><a href="index.html#projects">Projects</a></li>
+                <li><a href="index.html#experience">Experience</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <section id="restaurant-management-system" style="display: flex; justify-content: center; align-items: center; height: 100vh;">
+            <!-- CSS for hover effect -->
+    <style>
+        button:hover {
+            color: red;
+        }
+    </style>
+        <div style="max-width: 600px; text-align: left; padding: 20px;">
+    
+
+            <img src="assets/project1.png" alt="Restaurant Management System" style="width: 100%; margin-bottom: 20px;">
+            <p>I designed and developed a full-stack restaurant management system called <a href="https://relaxingkoala.vercel.app/" target="_blank">"Koala Restaurant"</a> using React, JavaScript, CSS and MySQL for the fully synced front and backend. The system includes a fully functional reservation system and seamless real-time communication between front-of-house staff and the kitchen.Additionally, it has admin access to track sales, look at visualized report and edit menu and prices.</p>
+
+            <p>The backend provides tools for both managers and staff. Managers and staff can edit menu items and prices, and the manager has access to a dashboard for generating sales reports to analyze restaurant performance. Additionally, I implemented data visualization features to help managers interpret the data more easily.</p>
+            
+            <p>Managers can approve or reject reservation requests through the backend, which ensures full synchronization between the front-end user interface and backend functionality. The system supports secure payment processing and is built with scalability in mind, using object-oriented design principles and patterns like Factory, Singleton, and MVC to facilitate future expansion and handle increased loads efficiently.</p>
+            
+            <!-- Buttons for Website and GitHub -->
+            <div style="margin-top: 20px; text-align: center;">
+                <a href="https://relaxingkoala.vercel.app/" target="_blank" style="text-decoration: none;">
+                    <button style="padding: 10px 20px; margin-right: 10px; background-color: black; color: white; border: none; border-radius: 5px; cursor: pointer; transition: color 0.3s;">
+                        Website
+                    </button>
+                </a>
+                <a href="https://github.com/HasibAlam/Restaurant-System" target="_blank" style="text-decoration: none;">
+                    <button style="padding: 10px 20px; background-color: black; color: white; border: none; border-radius: 5px; cursor: pointer; transition: color 0.3s;">
+                        GitHub Repo
+                    </button>
+                </a>
+            </div>
+        </div>
+    </section>
+    
+
+    
+    
+
+    <section class="container" id="about">
+        <h2>Functionality</h2>
+        <p>The main webpage consists of an introduction to the restaurant and a button to place an order, which navigates the user to the order page. On this page, the user can see all the menu items and their prices. Users can add items to their cart, specifying the quantity for each item. The total price is dynamically updated in the cart as items are added.</p>
+
+<p>Once the user has selected their items, they can proceed to the payment page. Here, they can choose between paying by cash or card. If the card option is selected, the user is prompted to enter their card details and the payment amount to proceed. For cash payments, the user enters the cash amount they are paying, and the system calculates any necessary change.</p>
+
+<p>Upon successful payment, whether by card or cash, a confirmation page is displayed to the user, indicating that their order has been successfully processed. Simultaneously, the kitchen staff receives the order details in real-time, ensuring efficient communication between the front-of-house and kitchen teams.</p>
+
+<p>Furthermore, the manager has access to a backend dashboard, where they can monitor all incoming orders, update the menu, view sales reports, and track reservation requests. The reservation system allows users to book tables in advance, and the manager can approve or decline reservations through the backend. This ensures that the system maintains full synchronization between user actions on the front-end and administrative functions on the back-end, creating a seamless restaurant management experience.</p>
+
+    
+<!-- Tools and Technology Section -->
+<section class="section-image" id="tools-technology">
+    <h2>Tools and Technology Used</h2>
+    <div class="tools-container">
+        <div class="tool">
+            <i class="fab fa-js-square"></i>
+            <p>JavaScript</p>
+        </div>
+        <div class="tool">
+            <i class="fab fa-react"></i>
+            <p>React</p>
+        </div>
+        <div class="tool">
+            <i class="fab fa-html5"></i>
+            <p>HTML</p>
+        </div>
+        <div class="tool">
+            <i class="fab fa-css3-alt"></i>
+            <p>CSS</p>
+        </div>
+        <div class="tool">
+            <i class="fas fa-database"></i>
+            <p>MySQL</p>
+        </div>
+    </div>
+</section>
+<br>
+<div style="text-align: center;">
+    <a href="https://relaxingkoala.vercel.app/" target="_blank" style="text-decoration: none;">
+        <button style="padding: 10px 20px; margin-right: 10px; background-color: rgb(160, 44, 44); color: white; border: none; border-radius: 5px; cursor: pointer; transition: color 0.3s;">
+            Go to the Website
+        </button>
+    </a>
+</div>
+
+<!-- Three Column Gallery Section -->
+<section class="gallery">
+    <div class="gallery-item">
+        <img src="assets/1.png" alt="Restaurant Interior 1">
+        <p>Admin Access</p>
+    </div>
+    <div class="gallery-item">
+        <img src="assets/2.png" alt="Restaurant Interior 2">
+        <p>Visualized Analytics</p>
+    </div>
+    <div class="gallery-item">
+        <img src="assets/4.png" alt="Restaurant Interior 3">
+        <p>Reservation Access</p>
+    </div>
+</section>
+
+
+</body>
+</html>

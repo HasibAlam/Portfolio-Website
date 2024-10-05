@@ -1,0 +1,912 @@
+/* GENERAL */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: white; /* Default light mode */
+  color: black; /* Default text color for light mode */
+  transition: background-color 0.3s, color 0.3s;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+p {
+  color: rgb(85, 85, 85);
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+  background-color: black;
+  color: white;
+}
+
+body.dark-mode a {
+  color: white;
+}
+
+body.dark-mode nav {
+  background-color: black;
+}
+
+body.dark-mode .logo {
+  color: white;
+}
+
+/* Light mode toggle button (moon icon) */
+.toggle-button {
+  position: fixed; /* Ensures it stays in the top-right of the screen */
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  font-size: 2rem;
+  color: black;
+  z-index: 100; /* Ensure it stays above other content */
+}
+
+body.dark-mode .toggle-button {
+  color: yellow; /* Icon color when in dark mode */
+}
+
+/* Responsive positioning for the toggle button */
+@media (max-width: 768px) {
+  .toggle-button {
+    top: 15px;
+    right: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .toggle-button {
+    top: 10px;
+    right: 10px;
+    font-size: 1.8rem; /* Adjust the size slightly for smaller screens */
+  }
+}
+
+/* DESKTOP NAV */
+
+nav,
+.nav-links {
+  display: flex;
+}
+
+nav {
+  justify-content: space-around;
+  align-items: center;
+  height: 17vh;
+}
+
+.nav-links {
+  gap: 2rem;
+  list-style: none;
+  font-size: 1.5rem;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+a:hover {
+  color: red;
+  text-decoration: underline;
+  text-underline-offset: 1rem;
+  text-decoration-color: rgb(181, 181, 181);
+}
+
+.logo {
+  font-size: 2rem;
+}
+
+.logo:hover {
+  cursor: default;
+}
+
+/* HAMBURGER MENU */
+
+#hamburger-nav {
+  display: none;
+}
+
+.hamburger-menu {
+  position: relative;
+  display: inline-block;
+}
+
+.hamburger-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 24px;
+  width: 30px;
+  cursor: pointer;
+}
+
+.hamburger-icon span {
+  width: 100%;
+  height: 2px;
+  background-color: black;
+  transition: all 0.3 ease-in-out;
+}
+
+.menu-links {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: white;
+  width: fit-content;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.3 ease-in-out;
+}
+
+.menu-links a {
+  display: block;
+  padding: 10px;
+  text-align: center;
+  font-size: 1.5rem;
+  color: black;
+  text-decoration: none;
+  transition: all 0.3 ease-in-out;
+}
+
+.menu-links li {
+  list-style: none;
+}
+
+.menu-links.open {
+  max-height: 300px;
+}
+
+.hamburger-icon.open span:first-child {
+  transform: rotate(45deg) translate(10px, 5px);
+}
+
+.hamburger-icon.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger-icon.open span:last-child {
+  transform: rotate(-45deg) translate(10px, -5px);
+}
+
+/* SECTIONS */
+
+section {
+  padding-top: 4vh;
+  height: 96vh;
+  margin: 0 10rem;
+  box-sizing: border-box;
+  min-height: fit-content;
+}
+
+body.dark-mode section {
+  background-color: black;
+  color: white;
+}
+
+.section-container {
+  display: flex;
+}
+
+/* PROFILE SECTION */
+
+#profile {
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
+  height: 80vh;
+}
+.section__pic-container {
+  display: flex;
+  width: 100%;
+  max-width: 400px; /* Set maximum width */
+  aspect-ratio: 1 / 1; /* Ensures a 1:1 aspect ratio for a perfect circle */
+  margin: auto;
+  border-radius: 50%; /* Make the image container circular */
+  overflow: hidden; /* Ensures the image stays inside the circular container */
+}
+
+.section__pic-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Maintain aspect ratio and cover the entire container */
+  border-radius: 50%; /* Make the image circular */
+}
+
+
+.section__text {
+  align-self: center;
+  text-align: center;
+}
+
+.section__text p {
+  font-weight: 600;
+}
+
+body.dark-mode .section__text p {
+  color: white;
+}
+
+.section__text__p1 {
+  text-align: center;
+}
+
+.section__text__p2 {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+}
+
+.title {
+  font-size: 3rem;
+  text-align: center;
+}
+
+body.dark-mode .title {
+  color: white;
+}
+
+#socials-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  gap: 1rem;
+}
+
+.icon {
+  cursor: pointer;
+  height: 2rem;
+}
+
+body.dark-mode .icon {
+  color: white;
+}
+
+/* BUTTONS */
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.btn {
+  font-weight: 600;
+  transition: all 300ms ease;
+  padding: 1rem;
+  width: 8rem;
+  border-radius: 2rem;
+}
+
+.btn-color-1,
+.btn-color-2 {
+  border: rgb(53, 53, 53) 0.1rem solid;
+}
+
+body.dark-mode .btn {
+  background-color: white;
+  color: black;
+}
+
+.btn-color-1:hover,
+.btn-color-2:hover {
+  cursor: pointer;
+}
+
+.btn-color-1,
+.btn-color-2:hover {
+  background: rgb(53, 53, 53);
+  color: white;
+}
+
+.btn-color-1:hover {
+  background: rgb(0, 0, 0);
+}
+
+.btn-color-2 {
+  background: none;
+}
+
+/* ABOUT SECTION */
+
+#about {
+  position: relative;
+}
+
+.about-containers {
+  gap: 2rem;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+
+.about-details-container {
+  justify-content: center;
+  flex-direction: column;
+}
+
+.about-containers,
+.about-details-container {
+  display: flex;
+}
+
+.about-pic {
+  border-radius: 2rem;
+}
+
+/* Background and border color changes for dark mode in details container */
+.details-container {
+  padding: 1.5rem;
+  flex: 1;
+  background: white;
+  border-radius: 2rem;
+  border: rgb(53, 53, 53) 0.1rem solid;
+  border-color: rgb(163, 163, 163);
+  text-align: center;
+}
+
+body.dark-mode .details-container {
+  background-color: #2c2c2c;
+  color: white;
+  border-color: white;
+}
+
+/* Target the left text specifically in dark mode */
+.about-text {
+  color: black;
+}
+
+body.dark-mode .about-text {
+  color: white;
+}
+
+.education-box h4 {
+  color: red;
+}
+
+body.dark-mode .education-box h4 {
+  color: #ff6f61; /* Light red in dark mode */
+}
+
+.education-box p.graduation {
+  font-family: 'Arial', sans-serif;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+
+/* Experience Section Styling */
+#experience {
+  padding: 0;
+  background-color: transparent;
+}
+
+body.dark-mode #experience {
+  background-color: black;
+}
+
+.title {
+  font-size: 2.5em;
+  text-align: center;
+  color: #333;
+  margin-bottom: 40px;
+  font-family: 'Arial', sans-serif;
+}
+
+body.dark-mode .title {
+  color: rgb(253, 255, 255);
+}
+
+.experience-details-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.experience-box {
+  background-color: #fff;
+  padding: 20px;
+  margin-bottom: 40px;
+  width: 80%;
+  border: 2px solid #df8033;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+body.dark-mode .experience-box {
+  background-color: #2c2c2c;
+  border-color: #ff6f61;
+}
+
+/* Center-align the job title and date */
+.experience-box h2, 
+.experience-box p {
+  text-align: center; /* Only applies to the job title and date */
+}
+
+.experience-box h2 {
+  font-size: 1.8em;
+  font-family: 'Georgia', serif;
+  color: #174e23;
+}
+
+body.dark-mode .experience-box h2 {
+  color: rgb(14, 214, 91);
+}
+
+/* Company Image Styling */
+.experience-box img {
+  display: block;
+  margin: 0 auto 20px; /* Centers the image and adds margin */
+  width: 120px;
+  height: auto;
+  border-radius: 50%;
+}
+
+/* Text beneath job title and date stays left-aligned */
+.experience-box ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.experience-box ul li {
+  font-size: 1.1em;
+  color: rgb(14, 13, 13);
+  padding: 10px 0;
+  border-bottom: none; /* No bottom border */
+  text-align: left; /* Ensures text beneath stays left-aligned */
+}
+
+body.dark-mode .experience-box ul li {
+  color: #ffffff;
+}
+
+/* CONTACT SECTION */
+
+#contact {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 70vh;
+  color: black;
+}
+
+body.dark-mode #contact {
+  color: white;
+}
+
+.contact-info-upper-container {
+  display: flex;
+  justify-content: center;
+  border-radius: 2rem;
+  border: rgb(53, 53, 53) 0.1rem solid;
+  background: rgb(250, 250, 250);
+  margin: 2rem auto;
+  padding: 1rem;
+  width: 60%; /* Increased width for alignment */
+}
+
+body.dark-mode .contact-info-upper-container {
+  background-color: #2c2c2c;
+}
+
+.contact-info-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem; /* Adds space between icon and text */
+  margin: 1rem;
+  width: 100%; /* Ensures the width for proper alignment */
+}
+
+.contact-info-container p {
+  font-size: larger;
+  margin: 0; /* Removes default margin */
+}
+
+.contact-icon {
+  cursor: default;
+}
+
+.email-icon,
+.contact-icon {
+  height: 2.5rem;
+  width: 2.5rem; /* Ensures consistency in icon size */
+}
+
+/* Adjusting for Dark Mode */
+body.dark-mode .contact-info-container p {
+  color: white; /* Text color in dark mode */
+}
+
+body.dark-mode .contact-icon {
+  filter: invert(1); /* Invert icon color for dark mode */
+}
+
+/* Responsive Design for Contact Section */
+@media (max-width: 1024px) {
+  .contact-info-upper-container {
+    width: 80%; /* Adjust width for medium-sized screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-info-upper-container {
+    flex-direction: column; /* Stack elements on smaller screens */
+    width: 90%; /* Further adjust width for small screens */
+    padding: 1.5rem;
+  }
+
+  .contact-info-container {
+    justify-content: center; /* Center align content */
+    width: 100%; /* Full width for small screens */
+  }
+
+  .contact-info-container p {
+    text-align: center; /* Center-align text for small screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-info-upper-container {
+    width: 100%; /* Full width for extra small screens */
+    padding: 1.5rem;
+  }
+
+  .contact-info-container {
+    justify-content: center; /* Center align for extra small screens */
+    flex-direction: column; /* Stack icon and text vertically */
+    text-align: center; /* Center-align text */
+  }
+
+  .contact-info-container p {
+    text-align: center;
+  }
+}
+
+/* Footer */
+footer {
+  background-color: #f0f0f0;
+  color: black;
+}
+
+body.dark-mode footer {
+  background-color: #121212;
+  color: white;
+}
+
+
+
+/* PROJECTS SECTION */
+
+#projects {
+  position: relative;
+}
+
+.color-container {
+  border-color: rgb(163, 163, 163);
+  background: rgb(250, 250, 250);
+}
+
+body.dark-mode .color-container {
+  background-color: #2c2c2c;
+}
+
+.project-img {
+  border-radius: 2rem;
+  width: 90%;
+  height: 90%;
+}
+
+.project-title {
+  margin: 1rem;
+  color: black;
+}
+
+body.dark-mode .project-title {
+  color: white;
+}
+
+/* Skills Section */
+.skills-section {
+  text-align: center;
+  padding: 50px 0;
+  background-color: #f9f9f9;
+}
+
+body.dark-mode .skills-section {
+  background-color: #121212;
+}
+
+.skills-section h1 {
+  font-size: 2.5em;
+  margin-bottom: 30px;
+  color: black; /* Light mode */
+}
+
+body.dark-mode .skills-section h1 {
+  color: white; /* Dark mode */
+}
+
+.skills-category {
+  margin-bottom: 50px;
+}
+
+/* Skill title aligned to the left and in red */
+.skill-title {
+  text-align: left;
+  color: red !important; /* Light mode */
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+body.dark-mode .skill-title {
+  color: #ff6f61; /* Dark mode color for the title */
+}
+
+/* Container for skill boxes */
+.skills-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+/* Skill box styling */
+.skill-box {
+  text-align: center;
+  padding: 20px;
+  width: 150px;
+  transition: transform 0.3s;
+}
+
+.skill-box:hover {
+  transform: scale(1.1);
+}
+
+.skill-box img,
+.skill-box i {
+  width: 80px;
+  height: 80px;
+}
+
+.skill-box p {
+  margin-top: 10px;
+  font-size: 1.2em;
+  color: black; /* Light mode */
+}
+
+body.dark-mode .skill-box p {
+  color: white; /* Dark mode */
+}
+
+.skill-box p.skill-description {
+  font-size: 0.9em;
+  color: rgb(29, 28, 28); /* Light mode */
+  margin-top: 10px;
+}
+
+body.dark-mode .skill-box p.skill-description {
+  color: rgb(200, 200, 200); /* Dark mode */
+}
+
+/* Programming skills container */
+.programming-skills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+}
+
+/* Skill box width for larger screens */
+.programming-skills .skill-box {
+  flex: 1 1 calc(25% - 40px);
+  text-align: center;
+  max-width: 200px;
+}
+
+.skill-box img,
+.skill-box i {
+  width: 80px;
+  height: 80px;
+}
+
+.skill-box p {
+  margin-top: 10px;
+  font-size: 1.2em;
+}
+
+/* Responsive styling for medium screens */
+@media (max-width: 1024px) {
+  .programming-skills .skill-box {
+    flex: 1 1 calc(33.33% - 40px); /* 3 per row */
+  }
+}
+
+/* Responsive styling for small screens */
+@media (max-width: 768px) {
+  .programming-skills .skill-box {
+    flex: 1 1 calc(50% - 40px); /* 2 per row */
+  }
+}
+
+/* Responsive styling for extra small screens */
+@media (max-width: 480px) {
+  .programming-skills .skill-box {
+    flex: 1 1 100%; /* 1 per row */
+  }
+}
+
+
+/* Achievements Section */
+#achievements {
+  padding: 50px;
+  margin-top: 50px;
+}
+
+#achievements .title {
+  text-align: center;
+  font-size: 2.5em;
+  margin-bottom: 40px;
+}
+
+body.dark-mode #achievements .title {
+  color: white;
+}
+
+.achievements-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.achievements-text {
+  width: 50%;
+  margin-top: 100px;
+}
+
+.achievements-text ul {
+  list-style: none;
+  padding: 0;
+}
+
+.achievements-text li {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+
+body.dark-mode .achievements-text li {
+  color: white;
+}
+
+.achievements-images {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.achievement-image {
+  width: 100%;
+  max-width: 350px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive adjustments for Achievements Section */
+@media (max-width: 768px) {
+  .achievements-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .achievements-text, .achievements-images {
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .achievements-text {
+    text-align: center;
+    margin-top: 40px;
+  }
+
+  .achievement-image {
+    max-width: 300px;
+  }
+}
+
+/* About Section */
+.about-education-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 30px;
+}
+
+.about-text {
+  flex: 1;
+}
+
+.education-box {
+  flex: 1;
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive adjustments for About Section */
+@media (max-width: 768px) {
+  .about-education-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-text, .education-box {
+    width: 100%;
+  }
+
+  .about-text {
+    margin-bottom: 20px;
+  }
+}
+
+
+/* Styling for the about section */
+.about-education-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 30px;
+}
+
+.about-text {
+  flex: 1;
+}
+
+.education-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.education-box {
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%; /* Ensures the box is full-width */
+  text-align: center;
+}
+
+/* Styling for the education images (beneath the education box, but outside it) */
+.education-images-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px; /* Add some spacing between the box and images */
+  width: 100%; /* Ensures the images container is full-width */
+}
+
+.education-image {
+  flex: 1;
+  padding: 0 10px; /* Add padding between the images */
+}
+
+.education-image img {
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
