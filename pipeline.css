@@ -1,0 +1,215 @@
+/* GENERAL */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-image: url('assets/pipelinebg2.jpeg'); /* Replace with correct path */
+  background-size: cover;
+  background-attachment: fixed;
+  color: white; /* Default text color for dark mode */
+  transition: background-color 0.3s, color 0.3s;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+p {
+  color: rgb(255, 255, 255); /* Lighter color for readability on dark background */
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+  background-color: black;
+  color: white;
+}
+
+body.dark-mode a {
+  color: white;
+}
+
+body.dark-mode nav {
+  background-color: black;
+}
+
+body.dark-mode .logo {
+  color: white;
+}
+
+/* Light mode toggle button (moon icon) */
+.toggle-button {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  font-size: 2rem;
+  color: white;
+  z-index: 100;
+}
+
+body.dark-mode .toggle-button {
+  color: yellow;
+}
+
+/* NAVIGATION */
+nav,
+.nav-links {
+  display: flex;
+}
+
+nav {
+  justify-content: space-around;
+  align-items: center;
+  height: 17vh;
+}
+
+.nav-links {
+  gap: 2rem;
+  list-style: none;
+  font-size: 1.5rem;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+a:hover {
+  color: red;
+  text-decoration: underline;
+  text-underline-offset: 1rem;
+  text-decoration-color: rgb(181, 181, 181);
+}
+
+.logo {
+  font-size: 2rem;
+}
+
+.logo:hover {
+  cursor: default;
+}
+
+/* SECTIONS */
+section {
+  padding: 5vh 10rem;
+  box-sizing: border-box;
+  min-height: fit-content;
+}
+
+.section-container {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  padding: 20px;
+}
+
+h2, h3 {
+  text-align: center;
+  color: white;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li {
+  margin-bottom: 10px;
+}
+
+div.content-box {
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 30px;
+  border-radius: 10px;
+}
+
+.content-box h2, .content-box h3 {
+  color: white;
+}
+
+.content-box p {
+  color: #dddddd; /* Slightly lighter text for readability */
+}
+
+/* Buttons */
+.btn-container {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: red;
+  color: white;
+}
+
+/* Tools Section */
+.tools-container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.tool {
+  text-align: center;
+}
+
+.tool i {
+  font-size: 3rem;
+}
+
+/* Ensure original colors for specific icons */
+.tool i.fab.fa-github {
+  color: #333; /* Original color of GitHub icon */
+}
+
+.tool i.fas.fa-server {
+  color: #007acc; /* Represents GitHub Actions in blue */
+}
+
+.tool i.fab.fa-microsoft {
+  color: #f25022; /* Represents the orange from Microsoft's logo */
+}
+
+.tool i.fab.fa-windows {
+  color: #00bcf2; /* Represents the blue from Windows logo */
+}
+
+.tool i.fas.fa-vial {
+  color: #fc5185; /* Pinkish for NUnit tests */
+}
+
+.tool p {
+  font-weight: bold;
+  color: white;
+}
+
+/* Video Section */
+#demo-container {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+iframe {
+  border: none;
+  width: 640px;
+  height: 360px;
+}

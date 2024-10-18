@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CI/CD Pipeline for Lottery Game</title>
+    <link rel="stylesheet" href="pipeline.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav id="desktop-nav">
+            <ul class="nav-links">
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#skills">Skills</a></li>
+                <li><a href="index.html#projects">Projects</a></li>
+                <li><a href="index.html#experience">Experience</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <!-- Project Image -->
+    <img src="assets/game.png" alt="CI/CD Pipeline Project" style="width: 50%; margin: 20px auto 20px auto; display: block;">
+
+    <section id="pipeline-project" style="display: flex; justify-content: center; align-items: center; height: 100vh;">
+        <div style="max-width: 600px; text-align: left; padding: 20px; background-color: rgba(0, 0, 0, 0.7); border-radius: 15px;">
+            <h2>CI/CD Pipeline for Lottery Game</h2>
+            <p>This project demonstrates the implementation of a fully automated CI/CD pipeline for a lottery game built using the .NET framework in C#. The pipeline utilizes GitHub for version control, GitHub Actions for CI/CD automation, and Azure for hosting the instance and site analytics.</p>
+
+            <h3>Functionality</h3>
+            <ul>
+                <li>Version control is handled by GitHub, and the CI/CD pipeline is implemented using GitHub Actions workflows.</li>
+                <li>Azure is used to host the application, providing real-time analytics and monitoring.</li>
+                <li>The lottery game, built using the .NET framework in C#, allows users to guess a number between 1 and 10. If the guessed number matches the winning number, the user wins; otherwise, they lose.</li>
+                <li>The pipeline automates the building, testing, and deployment of the application to Azure whenever a new change is pushed to the GitHub repository.</li>
+                <li>The pipeline also integrates NUnit testing to ensure that the core functionality of the lottery game works correctly before deployment.</li>
+            </ul>
+
+            <h3>CI/CD Pipeline Details</h3>
+            <p>The pipeline is built using <strong>GitHub Actions</strong>, where workflows are defined to automate the building, testing, and deployment processes. The pipeline is fully automated, meaning that any change made to the GitHub repository will trigger the following steps:</p>
+            <ul>
+                <li>**Build**: The application is built using .NET commands to ensure that the code compiles and is ready for deployment.</li>
+                <li>**Test**: NUnit tests are executed to verify the functionality of the game logic, particularly the number generation and the win/lose conditions.</li>
+                <li>**Deploy**: The application is deployed to Azure, where it is hosted and monitored.</li>
+                <li>Azure provides analytics to monitor the app’s performance and usage.</li>
+            </ul>
+
+            <!-- GitHub Repo Link Button -->
+            <div style="margin-top: 20px; text-align: center;">
+                <a href="https://github.com/HasibAlam/dot-net-app" target="_blank" style="text-decoration: none;">
+                    <button style="padding: 10px 20px; background-color: black; color: white; border: none; border-radius: 5px; cursor: pointer; transition: color 0.3s;">
+                        GitHub Repo
+                    </button>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tools and Technology Section -->
+    <section class="section-image" id="tools-technology">
+        <h2>Tools and Technology Used</h2>
+        <div class="tools-container">
+            <div class="tool">
+                <i class="fab fa-github"></i>
+                <p>GitHub</p>
+            </div>
+            <div class="tool">
+                <i class="fas fa-server"></i>
+                <p>GitHub Actions</p>
+            </div>
+            <div class="tool">
+                <i class="fab fa-microsoft"></i>
+                <p>Azure</p>
+            </div>
+            <div class="tool">
+                <i class="fab fa-windows"></i>
+                <p>.NET Framework</p>
+            </div>
+            <div class="tool">
+                <i class="fas fa-vial"></i>
+                <p>NUnit</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Demo Video Section -->
+    <div style="margin-top: 40px; text-align: center;">
+        <h3>Watch the Lottery Game CI/CD Pipeline Demo</h3>
+        <iframe src="https://liveswinburneeduau-my.sharepoint.com/personal/103810516_student_swin_edu_au/_layouts/15/embed.aspx?UniqueId=1f780280-7548-4fbc-bb87-bc584fcd6574&embed=%7B%22ust%22%3Atrue%2C%22hv%22%3A%22CopyEmbedCode%22%7D&referrer=StreamWebApp&referrerScenario=EmbedDialog.Create" width="640" height="360" frameborder="0" scrolling="no" allowfullscreen title="lotteryGame.mp4"></iframe>
+    </div>
+
+    <!-- GitHub Repo Link Button -->
+    <div style="margin-top: 20px; text-align: center;">
+        <a href="https://github.com/HasibAlam/dot-net-app" target="_blank" style="text-decoration: none;">
+            <button style="padding: 20px 40px; background-color: rgb(204, 33, 33); color: white; border: none; border-radius: 5px; cursor: pointer; transition: color 0.3s;">
+                GitHub Repo
+            </button>
+        </a>
+    </div>
+
+</body>
+</html>
